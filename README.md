@@ -42,30 +42,30 @@
 ★ \(‾▿‾\) ᴠɪᴍɪғʏ ᴇᴠᴇʀʏᴛʜɪɴɢ (/‾▿‾)/ ★
 ```
 ## table of contents
-1. [intro](#Intro)
-1. [just a warning](#Disclaimer)
-1. [installing](#Installing)
+1. [intro](#intro)
+1. [just a fair warning :D](#disclaimer)
+1. [installing](#installing)
 1. [how it works](#how-it-works)
 1. [vim](#vim-plugins)
-1. [a bit about the config](#About)
-1. [previews](#Previews)
-1. [to be done after my exams](#To-be-done-after-my-exams)
-1. [credits](#Credits)
-1. [license](#License)
-1. [a final word](#Spread-the-word)
+1. [a bit about the config](#about)
+1. [previews](#previews)
+1. [to be done after my exams](#to-be-done-after-my-exams)
+1. [credits](#credits)
+1. [license](#license)
+1. [a final word](#spread-the-word)
 
-# Intro
+# intro
 
 The legend goes that dot-files arose from a bug in the earliest days of UNIX: in an effort to avoid listing the . and .. entries of a directory, the ls command skipped files that began with the '.' character. As a result, any file with a name beginning with '.' was not reported by ls, i.e. it was a "hidden" file. A user's home directory was a convenient place to put user-specific configuration files, but such files were also an eyesore; one popular solution to this problem was to make those configuration files hidden so that they wouldn't annoy the user. Thus, the tradition of dot-files was born.  
 
-# Disclaimer
+# disclaimer
 
 * Basically, I am new to this dotfiles world, so i cant guarantee that everything works exactly as in mine 
 * A lot more to be done. I have planned to do the [rest](#To-be-done-after-my-exams) after my exams are over
 * My setup is heavily dependent on scripts : `~/dotfiles_ikigai/scripts/ `
 * Yeah i do use and tweak other peoples dotfiles. It's more of like getting inspired `(~‾▿‾)~` 
 
-# Installing
+# installing
 
 Start by cloning the repo to the root of your home directory `~/dotfiles_ikigai` by `bash
 cd ~ && git clone` 
@@ -106,13 +106,13 @@ I make use of certain vim-plugins , which contributes to an easier workflow. My 
 To install the plugins for yourself , use my .vimrc file. You can easily copy it to your home(~) directory. Then from vim last line mode execute `PluginInstall`. Ta da....!! Easy as it can
 be.
 
-# About
+# about
 
 Some people fear the command line. Others consider it arcane and obsolete. Many of us know the truth, though; often, command line tools are just the right tools for the job.
 
 My terminal emulator of choice is the lightweight, unicode, 256 color [urxvt](http://linux.die.net/man/1/urxvt). I make use of [bash](https://www.gnu.org/software/bash/) as my interactive shell. I love vim , thus i try to use applications which can support or can be configured to use vim like keybindings.
 
-# Previews
+# previews
 
 ## custom neofetch like system information
 A try at mimicking the colors of the [Flag of India](https://en.wikipedia.org/wiki/Flag_of_India) 
@@ -161,13 +161,13 @@ All ascii scripts (which i collected from others) are available in the `scripts`
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/funascii.png)
 
 
-# To be done after my exams
+# to be done after my exams
 
 - [ ] Try a different status bar 
 - [ ] Try out Conky
 - [ ] Better commented scripts :(
 
-# Credits
+# credits
 
 - Luke Smith really gave a great idea about what could be done in i3.
 
@@ -178,8 +178,8 @@ All ascii scripts (which i collected from others) are available in the `scripts`
 - Special mentions to addy-fe for a beautiful documention of his setup. Helped a lot!
 
 
-# License  
+# license  
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/yedhink/dotfiles_ikigai/blob/master/LICENSE) file for details
 
-# Spread the word
+# spread the word
 Liked the setup? Appreciate the effort? Just give the repository a star :star: and spread the word if you found it useful
