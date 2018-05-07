@@ -6,9 +6,9 @@
 # install wmctrl. Its a prerequisite to make this script work.
 
 # Launch it in your i3 config file
-# exec --no-startup-id ~/.config/i3/init_workspace.sh
+# exec --no-startup-id ~/dotfiles_ikigai/scripts/init_workspace.sh
 #
-# Dont forget to make it executable : # chmod +x init_workspace.sh
+# Dont forget to make it executable : # chmod 777 init_workspace.sh
 # HAVE FUN !
 
 # App you want to start :
