@@ -145,7 +145,7 @@ vim, ranger, ncmpcpp, htop in action
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/music.png)
 
 ## qutebrowser - with my precious dark theme that saves me from the evil light
-"we wants it. we needs it. Must have the precious" 
+"we wants it. we needs it. Must have the precious"   
 make use of `~/dotfiles_ikigai/.config/qutebrowser/inspected_css/sd.css` for the theme
 
 ### privacy above all
