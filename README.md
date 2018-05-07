@@ -49,7 +49,7 @@
  - [vim](#vim-plugins)
  - [a bit about the setup](#About-the-setup)
  - [previews](#previews)
- - [tODO](#To-be-done-after-my-exams)
+ - [todo](#To be done after my exams)
  - [credits](#Credits)
  - [star the repo if you liked it](#Spread-the-word)
 
