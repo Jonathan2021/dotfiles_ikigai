@@ -75,6 +75,7 @@ all the above mentioned application are necessary for proper working and usage o
 * [lolcat](https://github.com/busyloop/lolcat) -> rainbow effects  
 * [task](https://taskwarrior.org/) -> todo list
 * [zathura](https://pwmt.org/projects/zathura/installation/) -> my pdf viewer
+* [figlet](http://www.figlet.org/) -> the 3D fonts
 
 stow is available for all linux and most other unix like distributions via your package manager.
 
