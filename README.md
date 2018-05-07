@@ -42,16 +42,17 @@
 ★ \(‾▿‾\) ᴠɪᴍɪғʏ ᴇᴠᴇʀʏᴛʜɪɴɢ (/‾▿‾)/ ★
 ```
 ## table of contents
- - [introduction](#Intro)
- - [just a warning :D](#Disclaimer)
- - [installing](#Installing)
- - [how it works](#how-it-works)
- - [vim](#vim-plugins)
- - [a bit about the setup](#About)
- - [previews](#previews)
- - [todo](#To-be-done-after-my-exams)
- - [credits](#Credits)
- - [star the repo if you liked it](#Spread-the-word)
+1. [intro](#Intro)
+1. [just a warning](#Disclaimer)
+1. [installing](#Installing)
+1. [how it works](#how-it-works)
+1. [vim](#vim-plugins)
+1. [a bit about the config](#About)
+1. [previews](#Previews)
+1. [to be done after my exams](#To-be-done-after-my-exams)
+1. [credits](#Credits)
+1. [license](#License)
+1. [a final word](#Spread-the-word)
 
 # Intro
 
