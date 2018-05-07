@@ -6,7 +6,7 @@ sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # change lockscreen wallpaper automatically 
-nohup bash ~/dotfiles/scripts/lockscreen.sh 2> nohup.err < /dev/null &
+nohup bash ~/dotfiles_ikigai/scripts/lockscreen.sh 2> nohup.err < /dev/null &
 
 # merge in defaults and keymaps
 if [ -f $sysresources ]; then
