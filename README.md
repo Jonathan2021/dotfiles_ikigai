@@ -67,8 +67,8 @@ The legend goes that dot-files arose from a bug in the earliest days of UNIX: in
 
 # installing
 
-Start by cloning the repo to the root of your home directory `~/dotfiles_ikigai` by `bash
-cd ~ && git clone https://github.com/yedhink/dotfiles_ikigai` 
+Start by cloning the repo to the root of your home directory `~/dotfiles_ikigai` by ```bash
+cd ~ && git clone https://github.com/yedhink/dotfiles_ikigai``` 
 
 all the above mentioned application are necessary for proper working and usage of my config. most of packages could be easily installed, but finding some of those is a bit tricky. so here are the links to applications which i found hard to find in the first place :)  
 * [nms](https://github.com/bartobri/no-more-secrets) -> decryption effects 
