@@ -1,0 +1,22 @@
+=head2 Wed Apr 11 20:31:53 2018: C<Module> L<local::lib|local::lib>
+
+=over 4
+
+=item *
+
+C<installed into: /home/ikigai/perl5/lib/perl5>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.000024>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+
