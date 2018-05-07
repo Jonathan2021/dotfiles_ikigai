@@ -44,12 +44,12 @@
 ## table of contents
  - [introduction](#Intro)
  - [just a warning :D](#Disclaimer)
- - [installing](#installing)
+ - [installing](#Installing)
  - [how it works](#how-it-works)
  - [vim](#vim-plugins)
- - [a bit about the setup](#About-the-setup)
+ - [a bit about the setup](#About)
  - [previews](#previews)
- - [todo](#To be done after my exams)
+ - [todo](#To-be-done-after-my-exams)
  - [credits](#Credits)
  - [star the repo if you liked it](#Spread-the-word)
 
@@ -105,7 +105,7 @@ I make use of certain vim-plugins , which contributes to an easier workflow. My 
 To install the plugins for yourself , use my .vimrc file. You can easily copy it to your home(~) directory. Then from vim last line mode execute `PluginInstall`. Ta da....!! Easy as it can
 be.
 
-# About the setup
+# About
 
 Some people fear the command line. Others consider it arcane and obsolete. Many of us know the truth, though; often, command line tools are just the right tools for the job.
 
