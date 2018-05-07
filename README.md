@@ -38,6 +38,7 @@
  zathura        > free, plugin-based document viewer 
  magick         > edit,convert and beautify your art
  lxappearance   > theme switcher for GTK+ 
+ lock           > betterlockscreen 
 
 ★ \(‾▿‾\) ᴠɪᴍɪғʏ ᴇᴠᴇʀʏᴛʜɪɴɢ (/‾▿‾)/ ★
 ```
@@ -78,6 +79,7 @@ all the above mentioned application are necessary for proper working and usage o
 * [task](https://taskwarrior.org/) -> todo list
 * [zathura](https://pwmt.org/projects/zathura/installation/) -> my pdf viewer
 * [figlet](http://www.figlet.org/) -> the 3D fonts
+* [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) -> an excellent lockscreen
 
 stow is available for all linux and most other unix like distributions via your package manager.
 
@@ -159,9 +161,11 @@ make use of `~/dotfiles_ikigai/.config/qutebrowser/inspected_css/sd.css` for the
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/qtgithub.png)
 
 ## fun part - ascii is pure art
-All ascii scripts (which i collected from others) are available in the `scripts` folder
-
+all ascii scripts (which i collected from others) are available in the `scripts` folder
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/funascii.png)
+
+## betterlockscreen
+run `~/dotfiles_ikigai/scripts/lockscreen.sh` from your i3 config for each time the lock key is pressed
 
 
 # to be done after my exams
