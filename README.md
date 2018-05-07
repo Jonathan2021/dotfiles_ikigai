@@ -101,7 +101,7 @@ to install my **i3** configs use the command:
 
 this will symlink files to `~/.config/i3` and various other places.
 
-**you can always look through all files and cherry pick the required files too , like i would've done `¯\_(ツ)_/¯` **
+**you can always look through all files and cherry pick the required files too , like i would've done`¯\_(ツ)_/¯`**
 
 ## vim-plugins
 
