@@ -162,11 +162,13 @@ make use of `~/dotfiles_ikigai/.config/qutebrowser/inspected_css/sd.css` for the
 
 ## fun part - ascii is pure art
 all ascii scripts (which i collected from others) are available in the `scripts` folder
+
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/funascii.png)
 
 ## betterlockscreen
-run `~/dotfiles_ikigai/scripts/lockscreen.sh` from your i3 config for each time the lock key is pressed
+the wallpapers are changed using `~/dotfiles_ikigai/scripts/lockscreen.sh` script. Add it to your `.xinitrc` just like i have done in [mine](https://github.com/yedhink/dotfiles_ikigai/blob/bcef377c1798094be9995cc2e77e24963df0e4c1/.xinitrc)  
 
+![](https://github.com/yedhink/dotfiles_ikigai/blob/master/btlockscreen.png)
 
 # to be done after my exams
 
