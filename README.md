@@ -172,6 +172,11 @@ the wallpapers are changed automatically using `~/dotfiles_ikigai/scripts/locksc
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/btlockscreen.png)
 
+## rofi 
+launch all kind of applications with ease  
+
+![](https://github.com/yedhink/dotfiles_ikigai/blob/master/rofiscreen.png)
+
 # to be done after my exams
 
 - [ ] Try a different status bar 
