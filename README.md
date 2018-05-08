@@ -28,7 +28,7 @@
  taskwarrior    > todo list
  git            > global git config and aliases
  mpd            > music player daemon setup
- ncmpcpp        > ncurses mpc++ ui/color settings
+ ncmpcpp        > visualizer and music player
  ranger         > file manager with image previews and vim keybinds
  urxvt          > terminal emulator 
  feh            > view images and set wallpaper 
@@ -38,7 +38,7 @@
  zathura        > free, plugin-based document viewer 
  magick         > edit,convert and beautify your art
  lxappearance   > theme switcher for GTK+ 
- lock           > betterlockscreen 
+ lock           > betterlockscreen by pavan 
 
 ★ \(‾▿‾\) ᴠɪᴍɪғʏ ᴇᴠᴇʀʏᴛʜɪɴɢ (/‾▿‾)/ ★
 ```
@@ -141,7 +141,7 @@ vim, ranger, ncmpcpp, htop in action
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/busy.png)
 
 ## almighty-vim
-"So dark ! You sure you're not from the DC Universe?"
+**"So dark ! You sure you're not from the DC Universe?"**
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/vimqt.png)
 
@@ -151,7 +151,8 @@ vim, ranger, ncmpcpp, htop in action
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/music.png)
 
 ## qutebrowser - with my precious dark theme that saves me from the evil light
-"we wants it. we needs it. Must have the precious"   
+**"we wants it. we needs it. Must have the precious"**  
+
 make use of `~/dotfiles_ikigai/.config/qutebrowser/inspected_css/sd.css` for the theme
 
 ### privacy above all
