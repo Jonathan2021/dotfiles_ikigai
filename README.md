@@ -168,7 +168,7 @@ all ascii scripts are available in the `scripts` folder
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/funascii.png)
 
 ## betterlockscreen - what a beauty!
-the wallpapers are changed automatically using `~/dotfiles_ikigai/scripts/lockscreen.sh` script. Add it to y(which i collected from others) our `.xinitrc` just like i have done in [mine](https://github.com/yedhink/dotfiles_ikigai/blob/bcef377c1798094be9995cc2e77e24963df0e4c1/.xinitrc)  
+the wallpapers are changed automatically using `~/dotfiles_ikigai/scripts/lockscreen.sh` script. Add it to your `.xinitrc` just like i have done in [mine](https://github.com/yedhink/dotfiles_ikigai/blob/bcef377c1798094be9995cc2e77e24963df0e4c1/.xinitrc)  
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/btlockscreen.png)
 
