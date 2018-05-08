@@ -64,7 +64,7 @@ clear;echo -e "\n";tput cup 2 0;cat ~/dotfiles_ikigai/scripts/indian_neo;
 
 #█▓▒░ greets
 #(( i=i+1 ));tput cup $i 51;printf " \e[0m  hello \e[36m$name\033[0m, i'm \e[34m$host\n"
-(( i=i+1 ));tput cup $i 42;printf " With Great Scripts Come Great Responsibility" | lolcat -a -d 30 
+(( i=i+1 ));tput cup $i 42;printf " With Great Scripts Comes Great Responsibility" | lolcat -a -d 30 
 (( i=i+1 ));tput cup $i 40;printf " \e[0m\n"
 
 #█▓▒░ environment
