@@ -146,7 +146,8 @@ vim, ranger, ncmpcpp, htop in action
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/vimqt.png)
 
 ## ncmpcpp - lightweight music player and visualizer
-"And she's buying a Stairway to Heaven..."
+**"Is this the real life?  
+   Is this just fantasy? "**
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/music.png)
 
@@ -166,8 +167,8 @@ all ascii scripts are available in the `scripts` folder
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/funascii.png)
 
-## betterlockscreen
-the wallpapers are changed using `~/dotfiles_ikigai/scripts/lockscreen.sh` script. Add it to your `.xinitrc` just like i have done in [mine](https://github.com/yedhink/dotfiles_ikigai/blob/bcef377c1798094be9995cc2e77e24963df0e4c1/.xinitrc)  
+## betterlockscreen - what a beauty!
+the wallpapers are changed automatically using `~/dotfiles_ikigai/scripts/lockscreen.sh` script. Add it to y(which i collected from others) our `.xinitrc` just like i have done in [mine](https://github.com/yedhink/dotfiles_ikigai/blob/bcef377c1798094be9995cc2e77e24963df0e4c1/.xinitrc)  
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/btlockscreen.png)
 
