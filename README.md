@@ -162,7 +162,7 @@ make use of `~/dotfiles_ikigai/.config/qutebrowser/inspected_css/sd.css` for the
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/qtgithub.png)
 
 ## fun part - ascii is pure art
-all ascii scripts (which i collected from others) are available in the `scripts` folder
+all ascii scripts are available in the `scripts` folder
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/funascii.png)
 
