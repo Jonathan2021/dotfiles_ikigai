@@ -189,6 +189,8 @@ launch all kind of applications with ease
 
 - Xero Harrison a.k.a xero literally blew my mind. Such wonderful scripts. Such creativity.
 
+- Henrik Jeppesen for a wonnderful Arch Cheat Sheat that helped me a lot. 
+
 - addy-fe, Dylan, NerdyPepper and many other amazing guys from r/unixporn. I have used some of their dotfiles.
 
 - Special mentions to addy-fe for a beautiful documention of his setup. Helped a lot!
