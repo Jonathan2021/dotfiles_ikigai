@@ -72,7 +72,7 @@ start by cloning the repo to the root of your home directory `~/dotfiles_ikigai`
 cd ~ && git clone https://github.com/yedhink/dotfiles_ikigai
 ``` 
 
-all the above mentioned application are necessary for proper working and usage of my config. most of packages could be easily installed, but finding some of those is a bit tricky. so here are the links to applications which i found hard to find in the first place :)  
+all the above mentioned applications are necessary for proper working and usage of my config. most of packages could be easily installed, but finding some of those is a bit tricky. so here are the links to applications which i found hard to find in the first place :)  
 * [nms](https://github.com/bartobri/no-more-secrets) -> decryption effects 
 * [lolcat](https://github.com/busyloop/lolcat) -> rainbow effects  
 * [task](https://taskwarrior.org/) -> todo list
@@ -132,6 +132,8 @@ add any one of the applications you want on startup , to `~/dotfiles_ikigai/scri
 
 ## the ultimate super user prompt :D
 {♥‿♥} For me whenever I become "su", i need to be made aware of how "mighty" my powers are, since i've done stupid stuff before. :D
+
+make use of the file `~/dotfiles_ikiga/etc/bash.bashrc` to get the below output. (of course the requirements should already be installed)  
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/dotfiles_su.gif)
 
