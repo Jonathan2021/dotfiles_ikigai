@@ -19,10 +19,9 @@
  bash           > bash settings, aliases, and custom prompts
  vim            > cli based text editor -> the ultimate weapon of choice 
  qutebrowser    > browser with vim like keybinds 
- sysinfo.sh     > custom neofetch like system info script 
  scripts        > system automation scripts and terminal fun
- compton        > minimal composite config for opacity
- figlet         > custom ascii font
+ compton        > composite manager 
+ figlet         > custom ascii fonts
  lolcat         > the rainbow effects
  nms            > the decryption effects
  taskwarrior    > todo list
@@ -81,7 +80,8 @@ all the above mentioned application are necessary for proper working and usage o
 * [figlet](http://www.figlet.org/) -> the 3D fonts
 * [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) -> an excellent lockscreen
 
-stow is available for all linux and most other unix like distributions via your package manager.
+
+make use of stow to make the installation easier. stow is available for all linux and most other unix like distributions via your package manager.
 
 - `sudo pacman -S stow`
 - `sudo apt-get install stow`
@@ -89,7 +89,7 @@ stow is available for all linux and most other unix like distributions via your 
 
 or clone it [from source](https://savannah.gnu.org/git/?group=stow) and [build it](http://git.savannah.gnu.org/cgit/stow.git/tree/INSTALL) yourself.
 
-# how it works
+# how stow works
 
 **note:** stow can only create a symlink if a config file does not already exist. if a default file was created upon program installation you must delete it first before you can install a new one with stow. this does not apply to directories, only files
 
@@ -108,7 +108,7 @@ this will symlink files to `~/.config/i3` and various other places.
 ## vim-plugins
 
 I make use of certain vim-plugins , which contributes to an easier workflow. My plugin manager is [Vundle](https://github.com/VundleVim/Vundle.vim) , so you will have to install that first.    
-To install the plugins for yourself , use my .vimrc file. You can easily copy it to your home(~) directory. Then from vim last line mode execute `PluginInstall`. Ta da....!! Easy as it can
+To install the plugins for yourself , use my .vimrc file. You can easily copy it to your home(~) directory or symlink it. Then from vim last line mode execute `PluginInstall`. Ta da....!! Easy as it can
 be.
 
 # about
