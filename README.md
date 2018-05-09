@@ -196,7 +196,7 @@ launch all kind of applications with ease
 
 - [addy-fe](https://github.com/addy-dclxvi), [Dylan](https://github.com/dylanaraps) and many other amazing guys from r/unixporn. I have used some of their dotfiles.
 
-- Special mentions to xero and addy-fe for their beautiful documentions of on their dotfiles. Helped a lot!
+- Special mentions to xero and addy-fe for their beautiful documentions of their dotfiles. Helped a lot!
 
 
 # license  
