@@ -183,19 +183,20 @@ launch all kind of applications with ease
 
 - [ ] Try a different status bar 
 - [ ] Try out Conky
+- [ ] Mutt and Tmux 
 - [ ] Better commented scripts :(
 
 # credits
 
-- Luke Smith really gave a great idea about what could be done in i3.
+- [Luke Smith](https://github.com/LukeSmithxyz) really gave a great idea about what could be done in i3.
 
-- Xero Harrison a.k.a xero literally blew my mind. Such wonderful scripts. Such creativity.
+- [Xero Harrison](https://github.com/xero) a.k.a xero literally blew my mind. Such wonderful scripts. Such creativity. Exquisite markdowns.
 
-- Henrik Jeppesen for a wonnderful Arch Cheat Sheat that helped me a lot. 
+- [Henrik Jeppesen](https://github.com/Stickano) for a wonnderful Arch Cheat Sheat that helped me a lot. 
 
-- addy-fe, Dylan, NerdyPepper and many other amazing guys from r/unixporn. I have used some of their dotfiles.
+- [addy-fe](https://github.com/addy-dclxvi), [Dylan](https://github.com/dylanaraps) and many other amazing guys from r/unixporn. I have used some of their dotfiles.
 
-- Special mentions to addy-fe for a beautiful documention of his setup. Helped a lot!
+- Special mentions to xero and addy-fe for their beautiful documentions of on their dotfiles. Helped a lot!
 
 
 # license  
