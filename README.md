@@ -67,6 +67,7 @@ The legend goes that dot-files arose from a bug in the earliest days of UNIX: in
 * Yeah i do use and tweak other peoples dotfiles. It's more of like getting inspired `(~‾▿‾)~` 
 
 # themes
+**as of now , the themes included in dots are :**  
 - [Summer Of My Smiles](#theme-summer-of-my-smiles) 
 - [The Tricolor Flag](#theme-the-tricolor-flag)
 
