@@ -24,22 +24,13 @@ export HISTSIZE=10000
 shopt -s histappend
 
 # pywal
-(cat ~/.cache/wal/sequences &)
+(cat ~/dotfiles_ikigai/i3_summerofmysmile/sequences &)
 
-# execute my terminal script
-#. ~/dotfiles/scripts/work.sh
-#qbitrunning=$(ps aux | grep -w 'qbittorrent' | grep -v grep | awk '{print $2}')
-#if [ ! -z "$qbitrunning" ]; then
-#fi
-#PS1='[\u@\h \W]\$ '
 
 function _update_ps1() {
 	# X Terminal titles
 	case "$TERM" in
 		xterm*|rxvt*)
-			#PS1="\n\[\e[0;34m\]┌─[\[\e[1;36m\u\e[0;34m\]]──[\e[1;37m\w\e[0;34m]──[\[\e[1;36m\]${HOSTNAME%%.*}\[\e[0;34m\]]\[\e[1;35m\]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;35m\]>> \[\e[00;00m\]"
-			#PS1="\n\[\e[0;37m\]┌─[\[\e[1;32m\u\e[0;37m\]]──[\e[1;33m\w\e[0;34m]\[\e[0;34m\]\[\e[1;36m\]: \$\[\e[0;37m\]\n|\n\[\e[0;37m\]└────╼ \[\e[1;36m\]>>> \[\e[00;00m\]"
-			#PROMPT() {
 				_EXIT_STATUS=$?
 				[ $_EXIT_STATUS != 0 ] && _EXIT_STATUS_STR=" \[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;9m\]$_EXIT_STATUS\[$(tput sgr0)\]\[\033[38;5;7m\]]\[$(tput sgr0)\]"
 
@@ -50,17 +41,11 @@ function _update_ps1() {
 				else
 					_BRANCH_STR=""
 				fi
-			#PS1="\n\[\e[0;37m\]┌─[\[\e[1;32m\u\e[0;37m\]]──[\e[1;33m\w\e[0;34m]\[\e[0;34m\]\[\e[1;36m\] $_BRANCH_STR: \$ \[\e[0;37m\]\n|\n\[\e[0;37m\]└────╼ \[\e[1;36m\]>>> \[\e[00;00m\]"
-
-				#PS1="\[\033[38;5;14m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;6m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;7m\]╺─╸\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[\033[38;5;7m\]]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]$_BRANCH_STR\[$(tput sgr0)\]\[\033[38;5;15m\] \n\[$(tput sgr0)\]\[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;11m\]\A\[$(tput sgr0)\]\[\033[38;5;7m\]]\[$(tput sgr0)\]\[\033[38;5;15m\]$_EXIT_STATUS_STR \[$(tput sgr0)\]\[\033[38;5;7m\]>>\[$(tput sgr0)\] "
 				PS1='\[\e[1;34m♥ \e[1;33m\w \[\e[1;36m\]\$ '
 				unset _EXIT_STATUS_STR
 				unset _EXIT_STATUS
 				unset _BRANCH_STR
 				unset _BRANCH
-			#}
-
-			#PROMPT_COMMAND=PROMPT
 			;;
 		st*)	
 			PS1=$(powerline-shell $?)
