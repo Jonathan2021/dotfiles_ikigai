@@ -14,7 +14,7 @@ URxvt*termName:rxvt-unicode-256color
 
 rofi.color-enabled: true
 ! Dark theme.
-rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+rofi.theme: ~/dotfiles_ikigai/i3_summerofmysmiles/.config/rofi/colors-rofi-dark.rasi
 rofi.hide-scrollbar:true
 rofi.regex:true
 rofi.color-window: #000000, #000000, #000000
@@ -43,7 +43,6 @@ URxvt.mapAlert:: false
 URxvt.visualBell: false 
 URxvt.cursorBlink:          true
 urxvt*depth: 32
-!urxvt*background: rgba:0000/0000/0200/c000
 urxvt*background: [80]#000000 
 URxvt*scrollBar: false
 
@@ -111,8 +110,8 @@ URxvt*background:   #000000
 *.color15: #a5a5c2
 *color15:  #a5a5c2
 
+*.foreground: #a5a5c2
+*.background: #000000
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!! end !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-*.foreground: #a5a5c2
-*.background: #000000
