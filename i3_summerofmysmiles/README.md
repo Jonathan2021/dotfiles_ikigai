@@ -28,5 +28,5 @@ My summer theme , made for the love of Led Zeppelin!
 
 ## Installation
 
-If your're installing from scratch then just follow the [main documentation](https://github.com/yedhink/dotfiles_ikigai#installing).  
+If your're installing from scratch then just follow the [main documentation](https://github.com/yedhink/dotfiles_ikigai#installing). The configs from [main dots](https://github.com/yedhink/dotfiles_ikigai) are required to completely set up this theme and use it like I do.  
 Others can simply symlink the required files to your personal config. Or else cherry pick the necessary lines/files and copy pasta :)
