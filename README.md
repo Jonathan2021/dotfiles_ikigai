@@ -126,7 +126,7 @@ My terminal emulator of choice is the lightweight, unicode, 256 color [urxvt](ht
 
 ## theme-summer of my smiles
 included in `dotfiles_ikigai/i3_summerofmysmiles` directory.  
-**[more screenshots](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/README.md)  [installation](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/README.md)**
+**[screenshots](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/README.md)        [installation](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/README.md)**
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/busySum.png)  
 
 ## theme-the tricolor flag
