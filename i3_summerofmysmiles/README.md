@@ -7,6 +7,8 @@ My summer theme , made for the love of Led Zeppelin!
 
 **Distraction free reading and writing**  
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/free.png)    
+
+**Well...gotta study for exams too :(**
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/zat.png)  
 
 **Led Zeppelin FTW**  
@@ -21,6 +23,7 @@ My summer theme , made for the love of Led Zeppelin!
 - Text Editor: `vim`
 - Web Browser: `qutebrowser`
 - Window Manager: `i3`
+- bar: `polybar`
 
 
 ## Installation
