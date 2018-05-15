@@ -1,6 +1,16 @@
 #!/bin/bash
-# a system info script written by yours truly
-# it's hardcoded stuff, lulz
+#
+#
+#  _ _    _             _ 
+# (_) | _(_) __ _  __ _(_)
+# | | |/ / |/ _` |/ _` | |
+# | |   <| | (_| | (_| | |
+# |_|_|\_\_|\__, |\__,_|_|
+#           |___/         
+# 
+# www.github.com/yedhink
+#
+# a system info scripted with love
 
 name=$USER
 distro="arch linux"
