@@ -44,11 +44,12 @@
 ## table of contents
 1. [intro](#intro)
 1. [just a fair warning :D](#disclaimer)
+1. [themes](#themes)
 1. [installing](#installing)
 1. [how it works](#how-it-works)
 1. [vim](#vim-plugins)
 1. [a bit about the config](#about)
-1. [previews](#previews)
+1. [previews](#)
 1. [to be done after my exams](#to-be-done-after-my-exams)
 1. [credits](#credits)
 1. [license](#license)
@@ -64,6 +65,10 @@ The legend goes that dot-files arose from a bug in the earliest days of UNIX: in
 * A lot more to be done. I have planned to do the [rest](#To-be-done-after-my-exams) after my exams are over
 * My setup is heavily dependent on scripts : `~/dotfiles_ikigai/scripts/ `
 * Yeah i do use and tweak other peoples dotfiles. It's more of like getting inspired `(~‾▿‾)~` 
+
+# themes
+- [Summer Of My Smiles](#theme-summer-of-my-smiles) 
+- [The Tricolor Flag](#theme-the-tricolor-flag)
 
 # installing
 
@@ -119,6 +124,12 @@ My terminal emulator of choice is the lightweight, unicode, 256 color [urxvt](ht
 
 # previews
 
+## theme-summer of my smiles
+included in `dotfiles_ikigai/i3_summerofmysmiles` directory.  
+**[more screenshots](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/README.md)  [installation](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/README.md)**
+![](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/busySum.png)  
+
+## theme-the tricolor flag
 ## custom neofetch like system information
 A try at mimicking the colors of the [Flag of India](https://en.wikipedia.org/wiki/Flag_of_India) 
 
