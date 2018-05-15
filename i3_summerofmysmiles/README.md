@@ -3,13 +3,14 @@
 My summer theme , made for the love of Led Zeppelin!
 
 **Screenshots:**  
-[]!()  
+[]!(https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/busySum.png)  
 
 **Distraction free reading and writing**  
-[]!()    
-[]!()
+[]!(https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/free.png)    
+[]!(https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/zat.png)  
+
 **Led Zeppelin FTW**  
-[]!()
+[]!(https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_summerofmysmiles/ledzep.png)  
 
 ## Setup
 
@@ -24,5 +25,5 @@ My summer theme , made for the love of Led Zeppelin!
 
 ## Installation
 
-If your're installing from scratch then just follow the [main documentation]().  
+If your're installing from scratch then just follow the [main documentation](https://github.com/yedhink/dotfiles_ikigai#installing).  
 Others can simply symlink the required files to your personal config. Or else cherry pick the necessary lines/files and copy pasta :)
