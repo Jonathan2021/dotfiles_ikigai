@@ -6,18 +6,18 @@
 # install wmctrl. Its a prerequisite to make this script work.
 
 # Launch it in your i3 config file
-# exec --no-startup-id ~/dotfiles_ikigai/scripts/init_workspace.sh
+# exec --no-startup-id ~/.config/i3/init_workspace.sh
 #
-# Dont forget to make it executable : # chmod 777 init_workspace.sh
+# obviously, make it executable : # chmod +x init_workspace.sh
 # HAVE FUN !
 
 # App you want to start :
 apps=(
- #if you're using some other terminal then replace urxvt with that	
+ #if you're using urxvt then replace st with that	
  "urxvt"
 )
 
-# Which workspace you want to assign to your wanted App :
+# Which workspace to assign your wanted App :
 workspaces=(
 "1"
 )
@@ -46,5 +46,6 @@ done
 # wait a moment
 sleep 4 
 
-~/dotfiles_ikigai/scripts/sysinfo.sh > /dev/pts/0
-~/dotfiles_ikigai/scripts/neostart.sh > /dev/pts/0
+~/dotfiles/scripts/zoso > /dev/pts/0
+#/usr/bin/neofetch > /dev/pts/0
+#~/dotfiles/scripts/neostart.sh > /dev/pts/0
