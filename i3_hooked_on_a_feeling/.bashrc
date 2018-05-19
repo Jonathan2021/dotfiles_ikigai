@@ -24,7 +24,7 @@ fi
 gitprompt(){
 	git status &> /dev/null
 	if [ "$?" == 0 ];then
-		source ~/.bashed-on-a-feeling.sh
+		source ./.bashed-on-a-feeling.sh
 		local Save='\e[s' # Save cursor position
 		local Rest='\e[u' # Restore cursor to save point
 
