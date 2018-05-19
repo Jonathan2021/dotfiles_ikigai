@@ -5,23 +5,26 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
- Red='\[\e[0;31m\]';  BRed='\[\e[1;31m\]'
- Gre='\[\e[0;32m\]';  BGre='\[\e[1;32m\]'
- Yel='\[\e[0;33m\]';  BYel='\[\e[1;33m\]'
- Blu='\[\e[0;34m\]';  BBlu='\[\e[1;34m\]'
- Mag='\[\e[0;35m\]';  BMag='\[\e[1;35m\]'
- Cya='\[\e[0;36m\]';  BCya='\[\e[1;36m\]'
- Whi='\[\e[0;37m\]';  BWhi='\[\e[1;37m\]'
- None='\[\e[0m\]' # Return to default colour
-
-
 alias ls='ls --color=auto'
 
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
-# source the git prompt
+
+
+#
+#  ▓▓▓▓▓▓▓▓▓▓
+# ░▓ author ▓ ikigai 
+# ░▓ code   ▓ https://github.com/yedhink/dotfiles_ikigai
+# ░▓ 	    ▓ 
+# ░▓▓▓▓▓▓▓▓▓▓
+# ░░░░░░░░░░
+#
+# THIS IS A CUSTOM PROMPT THAT I MADE. 
+# TRIED TO MIMICK THE OH-MY-ZSH TERMINALPARTY THEME
+# NOT FULLY FUNCTIONAL. BUT THE BARE NECESSECITIES ARE PRESENT
+# I SHALL CALL THIS "BASH-GIT-PARTY-PROMPT"
 gitprompt(){
 	git status &> /dev/null
 	if [ "$?" == 0 ];then
@@ -29,7 +32,7 @@ gitprompt(){
 		gbranch="$(tput bold)$(tput setaf 7)$gbranch"
 		c_but_not_p=`git diff --stat origin/master.. | wc -l`
 
-		if [ c_but_not_p != 1 ];then
+		if [ $c_but_not_p -gt 0 ];then
 			((c_but_not_p = c_but_not_p - 1 ))
 		fi
 
@@ -78,9 +81,9 @@ gitprompt(){
 		gbranch=""
 	fi
 }
-#PROMPT_COMMAND='printf "\\e[38;5;7m%$((COLUMNS - 5))s%(%l:%M)T\\e[0m\\r"'
-#PROMPT_COMMAND='__git_ps1 \\e[38;5;2m "$c_but_not_p" "$c_but_m_before_p"\\e[1m\\r' 
-
+# set the default terminal
+TERM=rxvt-unicode-256color
+export TERM
 # set dafault TE
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -92,15 +95,14 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
-
-PROMPT_COMMAND="gitprompt"
+# show our prompt
+#PROMPT_COMMAND="gitprompt"
 
 function _update_ps1() {
 	# X Terminal titles
 	case "$TERM" in
 		xterm*|rxvt*)
 			PROMPT_COMMAND="gitprompt"
-			#PROMPT_COMMAND=PROMPT
 			;;
 		st*)	
 			PS1=$(powerline-shell $?)
@@ -111,11 +113,6 @@ function _update_ps1() {
 
 }
 
-# Prompt
-#PROMPT_COMMAND='printf "\\e[38;5;7m%$((COLUMNS - 5))s%(%l:%M)T\\e[0m\\r"'
-#PS1='\u@\h:\w (\[\e[32m\]$\[\e[0m\])\$ '
-TERM=rxvt-unicode-256color
-export TERM
 # Function to move to windows partition for work
 function movetoworkplace() {
 	cd /mnt/work/lz/java_tests/
