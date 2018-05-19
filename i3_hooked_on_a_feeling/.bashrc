@@ -5,6 +5,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+ Red='\[\e[0;31m\]';  BRed='\[\e[1;31m\]'
+ Gre='\[\e[0;32m\]';  BGre='\[\e[1;32m\]'
+ Yel='\[\e[0;33m\]';  BYel='\[\e[1;33m\]'
+ Blu='\[\e[0;34m\]';  BBlu='\[\e[1;34m\]'
+ Mag='\[\e[0;35m\]';  BMag='\[\e[1;35m\]'
+ Cya='\[\e[0;36m\]';  BCya='\[\e[1;36m\]'
+ Whi='\[\e[0;37m\]';  BWhi='\[\e[1;37m\]'
+ None='\[\e[0m\]' # Return to default colour
+
+
 alias ls='ls --color=auto'
 
 if [ -f ~/.bash_aliases ]; then
@@ -12,14 +22,64 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # source the git prompt
-if [ -f ~/.git-prompt.sh ]; then
-. ~/.git-prompt.sh
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWCOLORHINTS=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
+gitprompt(){
+	git status &> /dev/null
+	if [ "$?" == 0 ];then
+		gbranch="master"
+		gbranch="$(tput bold)$(tput setaf 7)$gbranch"
+		c_but_not_p=`git diff --stat origin/master.. | wc -l`
+
+		if [ c_but_not_p != 1 ];then
+			((c_but_not_p = c_but_not_p - 1 ))
+		fi
+
+		if [ $c_but_not_p == 0 ];then
+			c_but_not_p="$(tput bold)$(tput setaf 2)"
+		else
+			c_but_not_p="$(tput bold)$(tput setaf 7)$c_but_not_p$(tput bold)$(tput setaf 2)↑"
+		fi
+
+		c_but_m_before_p=`git diff --name-status | wc -l`
+		if [ $c_but_m_before_p -eq 0 ];then
+			c_but_m_before_p=""
+		else
+			c_but_m_before_p="$(tput bold)$(tput setaf 7)$c_but_m_before_p$(tput bold)$(tput setaf 2)✚"
+		fi
+
+		untracked=`git ls-files --others --exclude-standard | wc -l`
+		if [ $untracked -eq 0 ];then
+			untracked=""
+		else
+			untracked="$(tput bold)$(tput setaf 7)$untracked$(tput bold)$(tput setaf 2)?"
+		fi
+		# Create a string 
+		printf -v PS1RHS "\e[0m \e[0;1;31m%s %s %s %s\e[0m" "$gbranch" "$c_but_not_p" "$c_but_m_before_p" "$untracked"
+
+		# Strip ANSI commands before counting length
+		PS1RHS_stripped=$(sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" <<<"$PS1RHS")
+
+		local Save='\e[s' # Save cursor position
+		local Rest='\e[u' # Restore cursor to save point
+
+		# Save cursor position, jump to right hand edge, then go left N columns where
+		# N is the length of the printable RHS string. Print the RHS string, then
+		# return to the saved position and print the LHS prompt.
+
+		# Note: "\[" and "\]" are used so that bash can calculate the number of
+		# printed characters so that the prompt doesn't do strange things when
+		# editing the entered text.
+		
+		# ensure that this PS1 and corresponding ANSI Seq's are closed properly
+		PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
+		export PS1="\[${Save}\e[${COLUMNS}C\e[${#PS1RHS_stripped}D${PS1RHS}${Rest}\]${PS1}"
+
+	else
+		export PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
+		gbranch=""
+	fi
+}
 #PROMPT_COMMAND='printf "\\e[38;5;7m%$((COLUMNS - 5))s%(%l:%M)T\\e[0m\\r"'
-PROMPT_COMMAND='__git_ps1 "\\e[38;5;2m%$((COLUMNS))s\\e[1m\\r"' 
-fi
+#PROMPT_COMMAND='__git_ps1 \\e[38;5;2m "$c_but_not_p" "$c_but_m_before_p"\\e[1m\\r' 
 
 # set dafault TE
 export VISUAL=vim
@@ -33,21 +93,13 @@ export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
 
-# pywal
-#(cat ~/.cache/wal/sequences &)
-
-# execute my terminal script
-#. ~/dotfiles/scripts/work.sh
-#qbitrunning=$(ps aux | grep -w 'qbittorrent' | grep -v grep | awk '{print $2}')
-#if [ ! -z "$qbitrunning" ]; then
-#fi
-#PS1='[\u@\h \W]\$ '
+PROMPT_COMMAND="gitprompt"
 
 function _update_ps1() {
 	# X Terminal titles
 	case "$TERM" in
 		xterm*|rxvt*)
-
+			PROMPT_COMMAND="gitprompt"
 			#PROMPT_COMMAND=PROMPT
 			;;
 		st*)	
@@ -61,10 +113,8 @@ function _update_ps1() {
 
 # Prompt
 #PROMPT_COMMAND='printf "\\e[38;5;7m%$((COLUMNS - 5))s%(%l:%M)T\\e[0m\\r"'
-PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
 #PS1='\u@\h:\w (\[\e[32m\]$\[\e[0m\])\$ '
 TERM=rxvt-unicode-256color
-export PS1
 export TERM
 # Function to move to windows partition for work
 function movetoworkplace() {
