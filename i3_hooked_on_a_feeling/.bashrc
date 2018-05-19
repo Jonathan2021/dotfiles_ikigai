@@ -24,7 +24,7 @@ fi
 gitprompt(){
 	git status &> /dev/null
 	if [ "$?" == 0 ];then
-		source ./.bashed-on-a-feeling.sh
+		source /home/${USER}/.bashed-on-a-feeling.sh
 		local Save='\e[s' # Save cursor position
 		local Rest='\e[u' # Restore cursor to save point
 
@@ -37,7 +37,8 @@ gitprompt(){
 		# editing the entered text.
 		
 		# ensure that this PS1 and corresponding ANSI Seq's are closed properly
-		PS1='\[\e[0;31m\] \[\e[0m\] '
+		#PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
+		PS1='\[\e[0;31m\]$(tput setaf 7)$(tput bold)$(tput setab 4) \[\e[0m\] '
 		export PS1="\[${Save}\e[${COLUMNS}C\e[${#PS1RHS_stripped}D${PS1RHS}${Rest}\]${PS1}"
 	else
 		export PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
