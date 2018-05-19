@@ -21,9 +21,6 @@ fi
 # ░░░░░░░░░░
 #
 # THIS IS A CUSTOM PROMPT THAT I MADE. 
-# TRIED TO MIMICK THE OH-MY-ZSH TERMINALPARTY THEME
-# NOT FULLY FUNCTIONAL. BUT THE BARE NECESSECITIES ARE PRESENT
-# I SHALL CALL THIS "BASH-GIT-PARTY-PROMPT"
 gitprompt(){
 	git status &> /dev/null
 	if [ "$?" == 0 ];then
@@ -42,12 +39,12 @@ gitprompt(){
 		# ensure that this PS1 and corresponding ANSI Seq's are closed properly
 		PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
 		export PS1="\[${Save}\e[${COLUMNS}C\e[${#PS1RHS_stripped}D${PS1RHS}${Rest}\]${PS1}"
-
 	else
 		export PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
 		gbranch=""
 	fi
 }
+
 # set the default terminal
 TERM=rxvt-unicode-256color
 export TERM
@@ -65,6 +62,7 @@ shopt -s histappend
 # show our prompt
 PROMPT_COMMAND="gitprompt"
 
+# helpful when using more than one terminal 
 function _update_ps1() {
 	# X Terminal titles
 	case "$TERM" in
@@ -77,7 +75,6 @@ function _update_ps1() {
 		*)
 			;;
 	esac
-
 }
 
 # Function to move to windows partition for work
@@ -109,6 +106,7 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 
 fi
 
+PATH="/home/ikigai/${PATH:+:${PATH}}"; export PATH;
 PATH="/home/ikigai/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ikigai/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ikigai/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
