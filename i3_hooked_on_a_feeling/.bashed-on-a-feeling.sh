@@ -32,19 +32,19 @@ fi
 if [ $c_but_not_p == 0 ];then
 	c_but_not_p="$(tput bold)$(tput setaf 2)"
 else
-	c_but_not_p="$(tput bold)$(tput setaf 7)$c_but_not_p$(tput bold)$(tput setaf 2)↑"
+	c_but_not_p="$(tput bold)$(tput setaf 7)$c_but_not_p$(tput bold)$(tput setaf 2)"
 fi
 
 if [ $c_but_m_before_p -eq 0 ];then
 	c_but_m_before_p=""
 else
-	c_but_m_before_p="$(tput bold)$(tput setaf 7)$c_but_m_before_p$(tput bold)$(tput setaf 2)✚"
+	c_but_m_before_p="$(tput bold)$(tput setaf 7)$c_but_m_before_p$(tput bold)$(tput setaf 2)"
 fi
 
 if [ $untracked -eq 0 ];then
 	untracked=""
 else
-	untracked="$(tput bold)$(tput setaf 7)$untracked$(tput bold)$(tput setaf 2)?"
+	untracked="$(tput bold)$(tput setaf 7)$untracked$(tput bold)$(tput setaf 2)"
 fi
 # Create a string 
 printf -v PS1RHS "\e[0m \e[0;1;31m%s %s %s %s %s\e[0m" "$gbranch" "$a_but_not_c" "$c_but_not_p" "$c_but_m_before_p" "$untracked"
