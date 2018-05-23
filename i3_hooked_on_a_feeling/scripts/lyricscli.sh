@@ -1,18 +1,11 @@
 #!/usr/bin/env bash
 #
-# Fetch song lyrics.
+# Fetch song lyrics for mpd
 
-readarray -t song < <(cmus-remote -Q | awk 'BEGIN { ORS=" "};
-                          /tag artist/ {$1=$2=""; sub("  ", ""); a=$0}\
-                          /tag title/  {$1=$2=""; sub("  ", ""); t=$0}\
-                          END { print a"\n"t }')
 
-artist="${song[0]}"
-artist="${artist/Troy/Zac Efron & Vanessa Hudgens}"
-title="${song[1]}"
-title="${title/,}"
-title="${title/Pt./Part}"
-
+artist=`mpc -f "[%artist%]" | head -n 1`
+title=`mpc -f "[%title%]" | head -n 1`
+			
 url="https://lyrics.wikia.com/wiki/$artist:$title"
 url="${url/\’/%27}"
 
