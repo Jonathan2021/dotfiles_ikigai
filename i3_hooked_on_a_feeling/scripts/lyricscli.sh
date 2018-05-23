@@ -18,4 +18,4 @@ lyrics="${lyrics/'Music by:'*}"
 lyrics="${lyrics/'Lyrics licensed'*}"
 lyrics="${lyrics/'     '*}"
 
-vim -c Limelight -- <(printf "%s\\n%s\\n" "$artist - $title" "$lyrics")
+vim -c Limelight -c Goyo -- <(printf "%s\\n%s\\n" "$artist - $title" "$lyrics")
