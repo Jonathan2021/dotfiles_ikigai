@@ -37,7 +37,6 @@ gitprompt(){
 		# editing the entered text.
 		
 		# ensure that this PS1 and corresponding ANSI Seq's are closed properly
-		#PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
 		PS1='\[\e[0;31m\]\W\n $(tput setaf 7)$(tput bold)$(tput setab 4) \[\e[0m\] '
 		export PS1="\[${Save}\e[${COLUMNS}C\e[${#PS1RHS_stripped}D${PS1RHS}${Rest}\]${PS1}"
 	else
