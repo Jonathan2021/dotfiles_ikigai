@@ -7,6 +7,8 @@
 
 alias ls='ls --color=auto'
 
+source ~/.fonts/*.sh
+
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
@@ -24,9 +26,17 @@ fi
 gitprompt(){
 	git status &> /dev/null
 	if [ "$?" == 0 ];then
+		declare -i cno=0
 		source /home/${USER}/.bashed-on-a-feeling.sh
 		local Save='\e[s' # Save cursor position
 		local Rest='\e[u' # Restore cursor to save point
+
+		#while read -r Z; do
+		#	[[ "$Z" == commit* ]] && cno+=1
+		#done <<< "$(/usr/bin/git log 2> /dev/null)"
+		#commitstot=$cno
+		#commiticon="\\uf737"
+		#commiticon=`printf "%b\\n" "$commiticon"`
 
 		# Save cursor position, jump to right hand edge, then go left N columns where
 		# N is the length of the printable RHS string. Print the RHS string, then
@@ -37,13 +47,21 @@ gitprompt(){
 		# editing the entered text.
 		
 		# ensure that this PS1 and corresponding ANSI Seq's are closed properly
-		PS1='\[\e[0;31m\]\W\n $(tput setaf 7)$(tput bold)$(tput setab 4) \[\e[0m\] '
+		#PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
+		PS1='\[\e[1;33;3m\]\w \[\e[0m\]$(tput setaf 2)$(tput bold)$commitstot $commiticon\n $(tput setaf 7)$(tput bold)$(tput setab 4) \[\e[0m\] '
 		export PS1="\[${Save}\e[${COLUMNS}C\e[${#PS1RHS_stripped}D${PS1RHS}${Rest}\]${PS1}"
 	else
 		export PS1='\[\e[0;31m\]♥ \e[0;31m\]\W \[\e[1;33m\]\$\[\e[0m\] '
 		gbranch=""
+		pidof tmux > /dev/null
+		if [ $? == 1 ]; then
+			nohup bash ~/dotfiles/scripts/bar > /dev/null 2>&1 
+		else
+			pkill lemonbar > /dev/null
+		fi
 	fi
 }
+
 
 # set the default terminal
 TERM=rxvt-unicode-256color
@@ -59,6 +77,8 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
+# making alias global
+export BASH_ENV="/home/${USER}/.bash_aliases"
 # show our prompt
 PROMPT_COMMAND="gitprompt"
 
@@ -108,6 +128,7 @@ fi
 
 PATH="/home/ikigai/${PATH:+:${PATH}}"; export PATH;
 PATH="/home/ikigai/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PATH="/home/ikigai/.gem/ruby/2.5.0/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ikigai/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ikigai/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/ikigai/perl5\""; export PERL_MB_OPT;
@@ -124,3 +145,6 @@ b() {
 	done
 	cd $str
 }
+
+# for color ls
+source $(dirname $(gem which colorls))/tab_complete.sh
