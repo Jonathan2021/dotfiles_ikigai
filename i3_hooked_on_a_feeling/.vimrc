@@ -41,6 +41,10 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 " edit binaries.imgs,pdfs etc 
 Plugin 'tpope/vim-afterimage'
+" i3 syntax highlight
+Plugin 'PotatoesMaster/i3-vim-syntax'
+" alignment
+Plugin 'godlygeek/tabular'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -65,7 +69,11 @@ set ignorecase					" Ignore case when searching
 set tabstop=4					" tab width
 set shiftwidth=4
 set background=dark
-
+set ttyfast                    " Enable fast terminal connection.
+" Dynamic search higlighting
+set incsearch
+" toggle bw paste mode and normal
+set pastetoggle=<F3>
 " set our colorscheme
 colorscheme wal
 
@@ -76,19 +84,9 @@ let &t_Co = 256
 let g:rehash256 = 1
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-" toggle bw paste mode and normal
-set pastetoggle=<F3>
-" Dynamic search higlighting
-set incsearch
-set ttyfast                    " Enable fast terminal connection.
 
 " airline theme
 let g:airline_solarized_bg='dark'
-
-" Trigger configuration. Do not use <tab> if you use
-let g:UltiSnipsExpandTrigger="<C-n>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Place cursor at last edited position
 augroup resCur
@@ -108,13 +106,11 @@ let g:colorizer_maxlines=2000
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
 " Complete braces
 autocmd BufRead *.java inoremap { {<CR>}<Esc>ko
-
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
@@ -129,6 +125,9 @@ noremap <leader>ss :call StripWhitespace()<CR>
 
 " Exclude certain coloschemes while switching
 let g:colorscheme_switcher_exclude = ['default', 'morning','oh-la-la','vividchalk']
+
+" Make the tab line darker than the background.
+let g:badwolf_tabline = 0
 
 " ===============================================================================
 " DISTRACTION FREE WRITING
