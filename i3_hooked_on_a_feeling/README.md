@@ -1,3 +1,9 @@
+<h1 align="center">"iiiiiiiiiiiiiiii'm ...!</h1>  
+<p align="center">
+  <br><br>
+  <img src="">
+</p>
+
 # details
 
 | Item | Value |
@@ -11,8 +17,6 @@
 | Launcher | [rofi]() |
 | Bar | [Lemonbar]() |
 | Wallpaper | [feh]() |
-| Volume Control | amixer |
-| Brightness Controller | xbacklight |
 | Text Editor | [vim]() |
 | Multiplexer | [tmux]() |
 | music visualizer | [cava]() |
@@ -23,3 +27,17 @@
 | Themer | [pywal]() |
 | Dark Theme | [MolokaiDark]() |
 | Light Theme | [SolarizedLight]() |
+
+## how to use?  
+most of the configs could be found in the [main dots](). here only the new additons and configurations are available.  
+managed using stow. refer to this [documentation]() inorder to use the configs with stow.
+
+## previews  
+**love**
+![]()
+**workflow**
+![]()
+**git-prompt**
+![]()
+**music**
+![]()
