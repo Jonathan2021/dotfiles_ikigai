@@ -17,7 +17,5 @@ lyrics="${lyrics/'Written '*}"
 lyrics="${lyrics/'Music by:'*}"
 lyrics="${lyrics/'Lyrics licensed'*}"
 lyrics="${lyrics/'     '*}"
-#lyrics=`printf "%s\\n%s\\n" "$artist - $title" "$lyrics"`
-#echo $lyrics
-#sleep 0.5
+
 vim -c Limelight -c Goyo -- <(printf "%s\\n%s\\n" "$artist - $title" "$lyrics")

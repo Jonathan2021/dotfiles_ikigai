@@ -1,5 +1,4 @@
-#!/bin/bashi
-#pkill lemonbar || :
+#!/bin/bash
 bgco=`xrdb -query | grep background | tail -n 1 | awk '{print $2}'`
 fgco=`xrdb -query | grep foreground | tail -n 1 | awk '{print $2}'`
 
