@@ -129,7 +129,7 @@ My terminal emulator of choice is the lightweight, unicode, 256 color [urxvt](ht
 ## theme-hooked on a feeling
 included in `dotfiles_ikigai/i3_hooked_on_a_feeling` directory.  
 **[more screenshots and installation](https://github.com/yedhink/dotfiles_ikigai/tree/master/i3_hooked_on_a_feeling)**
-![]https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_hooked_on_a_feeling/previews/hookedfeeling.png()  
+![](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_hooked_on_a_feeling/previews/hookedfeeling.png)  
 
 ## theme-summer of my smiles
 included in `dotfiles_ikigai/i3_summerofmysmiles` directory.  
