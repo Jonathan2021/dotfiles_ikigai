@@ -19,13 +19,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " YouCompleteMe Plugin also installed outside vundle
 Plugin 'Valloric/YouCompleteMe'
-" Kure colorschemes
-Plugin 'morhetz/gruvbox'
-Plugin 'ayu-theme/ayu-vim'
-Plugin 'tomasiser/vim-code-dark'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'sjl/badwolf'
-Plugin 'junegunn/seoul256.vim'
 " Pairs of handy bracket mappings : vim colorscheme switching
 Plugin 'tpope/vim-unimpaired'
 " switch colors on fly
