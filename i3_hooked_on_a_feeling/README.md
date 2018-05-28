@@ -30,7 +30,9 @@
 
 ## how to use?  
 most of the configs could be found in the [main dots](). here only the new additons and configurations are available.  
-managed using stow. refer to this [documentation]() inorder to use the configs with stow.
+managed using stow. refer to this [documentation]() inorder to use the configs with stow. 
+
+### the [git prompt]() is one of my creations, do check it out if yoou liked it. the hiding and unhiding of lemonbar is bit of a hack , you can find how it's done in my [bash config](). automatic swithching between colorschemes is done using [a script](). you could just bind a key for switching like i have done in my [i3 config]() 
 
 ## previews  
 **love**
