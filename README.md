@@ -68,6 +68,7 @@ The legend goes that dot-files arose from a bug in the earliest days of UNIX: in
 
 # themes
 **as of now , the themes included in dots are :**  
+- [Hooked On A Feeling](#theme-hooked-on-a-feeling) 
 - [Summer Of My Smiles](#theme-summer-of-my-smiles) 
 - [The Tricolor Flag](#theme-the-tricolor-flag)
 
@@ -124,6 +125,11 @@ Some people fear the command line. Others consider it arcane and obsolete. Many 
 My terminal emulator of choice is the lightweight, unicode, 256 color [urxvt](http://linux.die.net/man/1/urxvt). I make use of [bash](https://www.gnu.org/software/bash/) as my interactive shell. I love vim , thus i try to use applications which can support or can be configured to use vim like keybindings.
 
 # previews
+
+## theme-summer of my smiles
+included in `dotfiles_ikigai/i3_hooked_on_a_feeling` directory.  
+**[more screenshots and installation](https://github.com/yedhink/dotfiles_ikigai/tree/master/i3_hooked_on_a_feeling)**
+![]https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_hooked_on_a_feeling/previews/hookedfeeling.png()  
 
 ## theme-summer of my smiles
 included in `dotfiles_ikigai/i3_summerofmysmiles` directory.  
