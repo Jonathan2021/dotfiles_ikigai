@@ -45,6 +45,8 @@ Plugin 'tpope/vim-afterimage'
 Plugin 'PotatoesMaster/i3-vim-syntax'
 " alignment
 Plugin 'godlygeek/tabular'
+" neat status line
+Plugin 'maciakl/vim-neatstatus'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
