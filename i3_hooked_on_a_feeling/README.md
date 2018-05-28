@@ -39,8 +39,10 @@ managed using stow. refer to this [documentation](https://github.com/yedhink/dot
 * it's the tmux status(not the lemonbar) that's being on the terminal. you can use it by symlinking [my .tmux.conf](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_hooked_on_a_feeling/.tmux.conf) with yours.
 
 ## previews  
-:heart:
+**My precious Darkness!:heart:**
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_hooked_on_a_feeling/previews/hookedfeeling.png)
+**light colorscheme on the stroke of a key**
+![](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_hooked_on_a_feeling/previews/pureWhite.png)
 **workflow and color swithcing at end**
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/i3_hooked_on_a_feeling/previews/work.gif)
 **git-prompt**
