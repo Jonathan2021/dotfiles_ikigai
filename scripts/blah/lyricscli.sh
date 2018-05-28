@@ -2,7 +2,6 @@
 #
 # Fetch song lyrics for mpd
 
-
 artist=`mpc -f "[%artist%]" | head -n 1`
 title=`mpc -f "[%title%]" | head -n 1`
 			
