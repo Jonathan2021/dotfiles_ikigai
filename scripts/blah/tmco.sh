@@ -8,7 +8,7 @@ else
 	tmux set -g status-fg "$fgco"
 fi
 
-tmux set -g status-bg "$bgco"
-tmux set -g pane-border-fg "$bgco"
-tmux set -g pane-active-border-fg "$bgco"
-tmux set -g pane-active-border-bg "$bgco"
+#tmux set -g status-bg "#99f2c8"
+#tmux set -g pane-border-fg "#0F1419"
+#tmux set -g pane-active-border-fg "#0F1419"
+#tmux set -g pane-active-border-bg "#0F1419"

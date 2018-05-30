@@ -1,5 +1,5 @@
 #!/bin/bash
-
+killall lemonbar || :
 wif() {
     # Read wifi information from file populated by NetworkManager hook.
 	cur=$(grep "wlp5s0" /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
