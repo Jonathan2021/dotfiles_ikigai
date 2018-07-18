@@ -6,8 +6,9 @@
 # Uncomment this to still load settings configured via autoconfig.yml
 # config.load_autoconfig()
 
-
+#  set custom theme
 c.content.user_stylesheets = str(config.configdir) + '/inspected_css/drac.css'
+
 config.bind(';p' , 'set downloads.location.directory ~/Pictures/ ;; hint links download')
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
@@ -56,13 +57,8 @@ c.url.searchengines = {
         }
 
 c.aliases = {
-    'jh': "open -t https://reddit.com/r/javahelp",
     'wh': "open -t https://alpha.wallhaven.cc/search?q=&categories=111&purity=100&topRange=1y&sorting=toplist&order=desc&colors=336600&page=1",
     'gh': "open -t https://github.com/yedhink",
-    'r': "open -t https://www.reddit.com/user/zemicolon/saved/",
-    'up': "open -t https://www.reddit.com/r/unixporn/",
-    'gm': "open -t https://accounts.google.com/signin/v2/sl/pwd?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession&cid=0&navigationDirection=forward",
-    'gd': "open -t https://accounts.google.com/ServiceLogin/signinchooser?service=wise&passive=true&continue=http%3A%2F%2Fdrive.google.com%2F%3Futm_source%3Den_US&usp=gtd&ltmpl=drive&urp=https%3A%2F%2Fduckduckgo.com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin",
     }
 
 ## Background color for webpages if unset (or empty to use the theme's
