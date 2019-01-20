@@ -199,26 +199,6 @@ launch all kind of applications with ease
 
 ![](https://github.com/yedhink/dotfiles_ikigai/blob/master/rofiscreen.png)
 
-# to be done after my exams
-
-- [ ] Try a different status bar 
-- [ ] Try out Conky
-- [ ] Mutt and Tmux 
-- [ ] Better commented scripts :(
-
-# credits
-
-- [Luke Smith](https://github.com/LukeSmithxyz) really gave a great idea about what could be done in i3.
-
-- [Xero Harrison](https://github.com/xero) a.k.a xero literally blew my mind. Such wonderful scripts. Such creativity. Exquisite markdowns.
-
-- [Henrik Jeppesen](https://github.com/Stickano) for a wonnderful Arch Cheat Sheat that helped me a lot. 
-
-- [addy-fe](https://github.com/addy-dclxvi), [Dylan](https://github.com/dylanaraps) and many other amazing guys from r/unixporn. I have used some of their dotfiles.
-
-- Special mentions to Xero and Adhi for their beautiful documentions of their dotfiles. Helped a lot!
-
-
 # license  
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/yedhink/dotfiles_ikigai/blob/master/LICENSE) file for details
 
