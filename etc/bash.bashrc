@@ -2,13 +2,17 @@
 # /etc/bash.bashrc
 #
 
+[ -z "$PS1" ] && return
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 [[ $DISPLAY ]] && shopt -s checkwinsize
 
 # Prompt for the legends
-PS1='\[\e[0;32m\]mighty \[\e[0;36m\]ϟϟϟ \[\e[0;32m\]root ⟶ \[\e[0;37m\]'
+if ! [ -n "${SUDO_USER}" -a -n "${SUDO_PS1}" ]; then
+	export PS1='mighty ϟϟϟ root ⟶'
+fi
 
 # Erase duplicates in history
 export HISTCONTROL=erasedups
@@ -17,8 +21,38 @@ export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
 
+# sudo hint
+if [ ! -e "$HOME/.sudo_as_admin_successful" ] && [ ! -e "$HOME/.hushlogin" ] ; then
+    case " $(groups) " in *\ admin\ *|*\ sudo\ *)
+    if [ -x /usr/bin/sudo ]; then
+	cat <<-EOF
+	To run a command as administrator (user "root"), use "sudo <command>".
+	See "man sudo_root" for details.
+	
+	EOF
+    fi
+    esac
+fi
+
+# if the command-not-found package is installed, use it
+if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found/command-not-found ]; then
+	function command_not_found_handle {
+	        # check because c-n-f could've been removed in the meantime
+                if [ -x /usr/lib/command-not-found ]; then
+		   /usr/lib/command-not-found -- "$1"
+                   return $?
+                elif [ -x /usr/share/command-not-found/command-not-found ]; then
+		   /usr/share/command-not-found/command-not-found -- "$1"
+                   return $?
+		else
+		   printf "%s: command not found\n" "$1" >&2
+		   return 127
+		fi
+	}
+fi
+
 case ${TERM} in
-  xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
+  xterm*|rxvt*|Eterm|aterm|kterm|gnome*|i3-sensible-terminal)
     PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
 
     ;;
@@ -29,12 +63,11 @@ esac
 if (( $UID == 0 )); then
 	if [[ $TERM == rxvt* ]]; then
 		clear;
-		cat /home/${USER}/dotfiles_ikigai/scripts/suTXT | figlet -f ~/dotfiles_ikigai/3d.flf -w 180 -p -W | nms | lolcat 
+		cat /home/jonathan/dotfiles_ikigai/text/suTXT | figlet -f /home/jonathan/dotfiles_ikigai/figlet-fonts/3d.flf -t -W | nms | lolcat 
 		echo
 	else
 		clear;
-		cat /home/${USER}/dotfiles_ikigai/scripts/suTXT | figlet -f ~/dotfiles_ikigai/3d.flf -w 200 -p -W | nms | lolcat 
+		cat /home/jonathan/dotfiles_ikigai/text/suTXT | figlet -f /home/jonathan/dotfiles_ikigai/figlet-fonts/3d.flf -t -W | nms | lolcat 
 		echo
 	fi	
 fi
-[

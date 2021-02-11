@@ -1,3 +1,11 @@
 [user]
-	email = yedhin1998@gmail.com
-	name = yedhink
+	name = Jonathan Sands
+	email = jonathan.sands@edu.devinci.fr
+[alias]
+        tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[core]
+	editor = vim
+[pull]
+	rebase = true
+[credential]
+	helper = cache

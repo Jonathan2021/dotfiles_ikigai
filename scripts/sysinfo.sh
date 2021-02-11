@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #  ______  __                       __          __    __                  __   __
 # /\__  _\/\ \                     /\ \        /\ \  /\ \                /\ \ /\ \
@@ -33,10 +33,10 @@ EMPTY=┄
 
 name=$USER
 host=`hostname`
-distro="arch linux"
+distro="ubuntu"
 kernel=`uname -r`
 wm=`wmctrl -m | grep -i name | awk '{print $2}'`
-battery=/sys/class/power_supply/BAT0
+#battery=/sys/class/power_supply/BAT0
 pkgs=`pacman -Qqs | wc -l`
 
 #█▓▒░ progress bar
@@ -60,11 +60,11 @@ draw()
   tput cup $i 54;printf $out
 }
 
-clear;echo -e "\n";tput cup 2 0;cat ~/dotfiles_ikigai/scripts/indian_neo;
+clear;echo -e "\n";tput cup 2 0;cat ~/dotfiles_ikigai/text/ubuntu-ascii;
 
 #█▓▒░ greets
 #(( i=i+1 ));tput cup $i 51;printf " \e[0m  hello \e[36m$name\033[0m, i'm \e[34m$host\n"
-(( i=i+1 ));tput cup $i 42;printf " With Great Scripts Comes Great Responsibility" | lolcat -a -d 30 
+(( i=i+1 ));tput cup $i 42;printf " \e[0m  Hello \e[36m$name\033[0m, I'm \e[34m$host\n" | lolcat -a -d 30 
 (( i=i+1 ));tput cup $i 40;printf " \e[0m\n"
 
 #█▓▒░ environment
@@ -89,8 +89,8 @@ ram=`free | awk '/Mem:/ {print int($3/$2 * 100.0)}'`
 
 
 #█▓▒░ volume
-vol=`amixer get Master | awk '/Front/ {print $5}' | tail -2 | cut -b 2-3 | paste -sd+ - | bc | (read volm;(( volm=volm/2 ));echo $volm)`
-if amixer get Master | grep -q '\[off\]' 
+vol=`amixer get IEC958 | awk '/Front/ {print $5}' | tail -2 | cut -b 2-3 | paste -sd+ - | bc | (read volm;(( volm=volm/2 ));echo $volm)`
+if amixer get IEC958 | grep -q '\[off\]' 
 then
   color='31'
 else
@@ -99,26 +99,26 @@ fi
 (( i=i+1 ));tput cup $i 39;printf "   \e[0;${color}m%-4s \e[1;${color}m%-5s %-25s \n" " vol" "$vol%" `draw $vol 15 $color` ;sleep 0.2
 
 #█▓▒░ battery
-b_full=$battery/energy_full
-b_now=$battery/energy_now
-bf=`cat $b_full`
-bn=`cat $b_now`
-(( i=i+1 ));tput cup $i 39;
-charge=`printf $(( "100 * $bn / $bf" - 3 ))`;sleep 0.2
-
-case 1 in
-  $(($charge <= 15)))
-    color='31'
-    ;;
-  *)
-    color='32'
-    ;;
-esac
-printf "   \e[0;${color}m%-4s \e[1;${color}m%-5s %-25s \n" " bat" "$charge%" `draw $charge 15 $color`;sleep 0.2
+# b_full=$battery/energy_full
+# b_now=$battery/energy_now
+# bf=`cat $b_full`
+# bn=`cat $b_now`
+# (( i=i+1 ));tput cup $i 39;
+# charge=`printf $(( "100 * $bn / $bf" - 3 ))`;sleep 0.2
+# 
+# case 1 in
+#   $(($charge <= 15)))
+#     color='31'
+#     ;;
+#   *)
+#     color='32'
+#     ;;
+# esac
+# printf "   \e[0;${color}m%-4s \e[1;${color}m%-5s %-25s \n" " bat" "$charge%" `draw $charge 15 $color`;sleep 0.2
 
 
 #█▓▒░ temperature
-temp=`sensors | awk '/Core\ 0/ {gsub(/\+/,"",$3); gsub(/\..+/,"",$3)    ; print $3}'`
+temp=$(($(cat /sys/devices/pci0000\:00/0000\:00\:18.3/hwmon/hwmon0/temp1_input) / 1000 ))
 case 1 in
   $(($temp <= 50)))
     color='32'
@@ -134,6 +134,6 @@ esac
 
 #█▓▒░ colors
 printf "\n"
-sleep 5;
-bash ~/dotfiles/scripts/color_inline.sh
+sleep 1;
+bash ~/dotfiles_ikigai/scripts/color_inline.sh
 tput cup 22 0; # set cursor at required position

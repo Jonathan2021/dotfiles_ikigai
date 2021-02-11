@@ -1,3 +1,3 @@
 #!/bin/bash
-bash /home/dotfiles/scripts/2spooky
+bash ~/dotfiles_ikigai/scripts/2spooky
 exit

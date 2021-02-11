@@ -14,11 +14,15 @@
 # App you want to start :
 apps=(
  #if you're using urxvt then replace st with that	
- "urxvt"
+ "spotify"
+ "chromium"
+ "append_layout ~/dotfiles_ikigai/workspace-1.json"
 )
 
 # Which workspace to assign your wanted App :
 workspaces=(
+"10: 🎷Music🎷"
+"2: Browser"
 "1"
 )
 
@@ -26,8 +30,8 @@ workspaces=(
 owNB=0
 
 # add paths of apps to array
-arr=()
-arr+=( '/usr/bin/' )
+#arr=()
+#arr+=( '/usr/bin/' )
 
 for iwin in ${!apps[*]}
 do
@@ -37,7 +41,8 @@ do
     done
 
     i3-msg workspace ${workspaces[$iwin]} # move in wanted workspace
-    ${arr[$iwin]}/${apps[$iwin]} & # start the wanted app
+    #${arr[$iwin]}/
+    ${apps[$iwin]} & # start the wanted app
 done
 
 ####### ABSOLUTELY OPTIONAL ########
@@ -46,6 +51,6 @@ done
 # wait a moment
 sleep 4 
 
-~/dotfiles/scripts/zoso > /dev/pts/0
-#/usr/bin/neofetch > /dev/pts/0
-#~/dotfiles/scripts/neostart.sh > /dev/pts/0
+~/dotfiles_ikigai/scripts/zoso > /dev/pts/0
+~/usr/bin/neofetch > /dev/pts/1
+~/dotfiles/scripts/neostart.sh > /dev/pts/3

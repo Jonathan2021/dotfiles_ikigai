@@ -13,7 +13,7 @@
 # a system info scripted with love
 
 name=$USER
-distro="arch linux"
+distro="Ubuntu"
 kernel=`uname -r`
 wm=`wmctrl -m | grep -i name | awk '{print $2}'`
 pkgs=`pacman -Qqs | wc -l`
