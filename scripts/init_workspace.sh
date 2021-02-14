@@ -13,9 +13,9 @@
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 # App you want to start :
+
 apps=(
- #if you're using urxvt then replace st with that	
- "chromium"
+ "qutebrowser"
  "i3-sensible-terminal -e $SCRIPTPATH/genericscripttobash $SCRIPTPATH/sysinfo.sh"
  "i3-sensible-terminal -e $SCRIPTPATH/genericscripttobash $SCRIPTPATH/neostart.sh"
 )
@@ -44,6 +44,15 @@ do
     i3-msg workspace ${workspaces[$iwin]} # move in wanted workspace
     #${arr[$iwin]}/
     ${apps[$iwin]} & # start the wanted app
+done
+
+# APPS with a designated workspace
+apps=(
+ "spotify"
+)
+
+for app in ${apps[@]}; do
+   ${app}
 done
 
 ####### ABSOLUTELY OPTIONAL ########

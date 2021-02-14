@@ -287,3 +287,34 @@ Feb 14 20:58 : exception: RTIOThread could not get realtime scheduling, continui
 Feb 14 20:58 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
 Feb 14 20:59 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Feb 14 20:59 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:33 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:33 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:33 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:33 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:35 : exception: Failed to commit /home/jonathan/.config/mpd/state: File exists
+Feb 14 21:35 : avahi: Client Disconnected, will reconnect shortly
+Feb 14 21:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:36 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:36 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:43 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:43 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:43 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:43 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:45 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:45 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:48 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:48 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:49 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:49 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:54 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 21:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 21:56 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 22:43 : exception: Failed to commit /home/jonathan/.config/mpd/state: File exists
+Feb 14 22:43 : exception: Failed to commit /home/jonathan/.config/mpd/state: File exists
+Feb 14 22:43 : avahi: Client Disconnected, will reconnect shortly
+Feb 14 22:45 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 22:45 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 22:45 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 22:45 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.

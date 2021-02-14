@@ -22,6 +22,7 @@
 
 set $mod Mod4
 set $term --no-startup-id i3-sensible-terminal
+set $browser --no-startup-id qutebrowser
 set $lock betterlockscreen -l
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -45,6 +46,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec $term 
 bindsym $mod+Mod1+Return exec $term; exec feh --bg-fill ~/Pictures/wallhaven-13117.jpg
+
+# start a browser
+bindsym $mod+b exec $browser
 
 # kill focused window
 bindsym $mod+Shift+a kill
@@ -152,7 +156,6 @@ bindsym $mod+Control+r exec ranger
 for_window [class="feh"] move container to workspace $ws4
 for_window [class="Spotify"] move container to workspace $ws10
 for_window [class="qbittorrent"] move container to workspace $ws4
-for_window [class="qutebrowser"] move container to workspace $ws2
 for_window [class="^.*"] border pixel 1 
 
 # reload the configuration file
@@ -277,6 +280,7 @@ exec --no-startup-id compton --config ~/compton.conf -b
 exec --no-startup-id mpd
 # copy and paste buffer
 exec autocutsel
+
 # Autostart urxvt (or your default terminal) and output commands
 exec --no-startup-id ~/dotfiles_ikigai/scripts/init_workspace.sh
 
@@ -298,4 +302,3 @@ exec --no-startup-id alsa
 # autolock screen after a while
 exec --no-startup-id xautolock -time 5 -corners ---- -locker 'betterlockscreen -l' -notify 20 -notifier 'xset dpms force off' &
 
-exec --no-startup-id spotify 
