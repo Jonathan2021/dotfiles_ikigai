@@ -2,6 +2,11 @@
 
 # set colors
 
+shiftr=0
+if [ $# -eq 1 ]; then
+    shiftr=$1
+fi
+
 colors=($(xrdb -query | sed -n 's/.*color\([0-9]\)/\1/p' | sort -nu | cut -f2))
 
 f=3 b=4
@@ -14,20 +19,20 @@ t=$'\e[0m'
 
 
 # output
-tput cup 15 43;
+tput cup 15 $((43 + shiftr));
 cat << EOF
 $f0▀▀▀▀▀▀▀$t   $f1▀▀▀▀▀▀▀$t   $f2▀▀▀▀▀▀▀$t   $f3▀▀▀▀▀▀▀$t
 EOF
-tput cup 18 43;
+tput cup 18 $((43 + shiftr));
 cat << EOF
 $f4▀▀▀▀▀▀▀$t   $f5▀▀▀▀▀▀▀$t   $f6▀▀▀▀▀▀▀$t   $f7▀▀▀▀▀▀▀$t
 EOF
 
-tput cup 16 43;
+tput cup 16 $((43 + shiftr));
 for i in {0..3}; do 
 	echo -en "\e[$((30+$i))m${colors[i]} \e[0m  "; 
 done
-tput cup 19 43;
+tput cup 19 $((43 + shiftr));
 for i in {4..7}; do 
 	echo -en "\e[$((30+$i))m${colors[i]} \e[0m  "; 
 done
