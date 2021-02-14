@@ -1,20 +1,20 @@
 #!/bin/sh
-betterlockscreen -l() {
-    i3betterlockscreen -l
+lock() {
+    betterlockscreen -l
 }
 
 case "$1" in
-    betterlockscreen -l)
-        betterlockscreen -l
+    lock)
+        lock
         ;;
     logout)
         i3-msg exit
         ;;
     suspend)
-        betterlockscreen -l && systemctl suspend
+        lock && systemctl suspend
         ;;
     hibernate)
-        betterlockscreen -l && systemctl hibernate
+        lock && systemctl hibernate
         ;;
     reboot)
         systemctl reboot
@@ -23,7 +23,7 @@ case "$1" in
         systemctl poweroff
         ;;
     *)
-        echo "Usage: $0 {betterlockscreen -l|logout|suspend|hibernate|reboot|shutdown}"
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
         exit 2
 esac
 

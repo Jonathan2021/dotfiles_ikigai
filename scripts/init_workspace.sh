@@ -15,7 +15,6 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 # App you want to start :
 apps=(
  #if you're using urxvt then replace st with that	
- "spotify"
  "chromium"
  "i3-sensible-terminal -e $SCRIPTPATH/genericscripttobash $SCRIPTPATH/sysinfo.sh"
  "i3-sensible-terminal -e $SCRIPTPATH/genericscripttobash $SCRIPTPATH/neostart.sh"
@@ -23,7 +22,6 @@ apps=(
 
 # Which workspace to assign your wanted App :
 workspaces=(
-"10: 🎷Music🎷"
 "2: Browser"
 "1"
 "1"

@@ -270,3 +270,20 @@ Feb 14 18:12 : avahi: Service 'Music Player @ SpaceX-BFC' successfully establish
 Feb 14 18:12 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
 Feb 14 19:32 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Feb 14 19:32 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 19:35 : avahi: Client Disconnected, will reconnect shortly
+Feb 14 19:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 19:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 19:36 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 19:36 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 20:12 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 20:12 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 20:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 20:24 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 20:46 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 20:46 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 20:55 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 20:55 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 20:58 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 20:58 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Feb 14 20:59 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Feb 14 20:59 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
