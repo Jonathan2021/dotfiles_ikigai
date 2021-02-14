@@ -37,7 +37,7 @@ distro="ubuntu"
 kernel=`uname -r`
 wm=`wmctrl -m | grep -i name | awk '{print $2}'`
 #battery=/sys/class/power_supply/BAT0
-pkgs=`pacman -Qqs | wc -l`
+pkgs=`dpkg --list | wc --lines`
 
 #█▓▒░ progress bar
 draw()

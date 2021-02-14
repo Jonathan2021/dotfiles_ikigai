@@ -10,19 +10,22 @@
 #
 # obviously, make it executable : # chmod +x init_workspace.sh
 # HAVE FUN !
-
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
 # App you want to start :
 apps=(
  #if you're using urxvt then replace st with that	
  "spotify"
  "chromium"
- "append_layout ~/dotfiles_ikigai/workspace-1.json"
+ "i3-sensible-terminal -e $SCRIPTPATH/genericscripttobash $SCRIPTPATH/sysinfo.sh"
+ "i3-sensible-terminal -e $SCRIPTPATH/genericscripttobash $SCRIPTPATH/neostart.sh"
 )
 
 # Which workspace to assign your wanted App :
 workspaces=(
 "10: 🎷Music🎷"
 "2: Browser"
+"1"
 "1"
 )
 
@@ -48,9 +51,4 @@ done
 ####### ABSOLUTELY OPTIONAL ########
 ## inject message(s) into terminal (first one created : /dev/pts/0)
 
-# wait a moment
-sleep 4 
 
-~/dotfiles_ikigai/scripts/zoso > /dev/pts/0
-~/usr/bin/neofetch > /dev/pts/1
-~/dotfiles/scripts/neostart.sh > /dev/pts/3
