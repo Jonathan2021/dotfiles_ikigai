@@ -78,7 +78,7 @@ function _update_ps1() {
         BLUE=$'\033[38;5;4m'
         YELLOW=$'\033[38;5;3m'
         MAGENTA=$'\033[38;5;5m'
-        _BLD=$'\033[1m'
+        RESET=$'\033[m'
     else
         WHITE=""
         CYAN=""
@@ -89,37 +89,39 @@ function _update_ps1() {
         BLUE=""
         YELLOW=""
         MAGENTA=""
+        RESET=""
     fi
+    _BLD=$'\033[1m'
 
 	# X Terminal titles
 	case "$TERM" in
 		xterm*|rxvt*)
                                 if [ $_EXIT_STATUS -ne 0 ]
                                 then
-                                    _EXIT_STATUS_STR="$CYAN($RED$_EXIT_STATUS$CYAN)"
+                                    _EXIT_STATUS_STR="\[$CYAN\](\[$RED\]$_EXIT_STATUS\[$CYAN\])"
                                 else
                                     _EXIT_STATUS_STR=""
                                 fi
 				_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 				if [ ! $_BRANCH == "" ]
 				then
-					_BRANCH_STR="$CYAN[$RED$_BRANCH$CYAN]"
+					_BRANCH_STR="\[$CYAN\][\[$RED\]$_BRANCH\[$CYAN\]]"
 				else
 					_BRANCH_STR=""
 				fi
                                 if [ ! $CONDA_DEFAULT_ENV == "" ]
                                 then
-                                    _CONDA_ENV_STR="$CYAN($RED$CONDA_DEFAULT_ENV$CYAN)"
+                                    _CONDA_ENV_STR="\[$CYAN\](\[$RED\]$CONDA_DEFAULT_ENV\[$CYAN\])"
                                 else
                                     _CONDA_ENV_STR=""
                                 fi
                                 if [ ! $VIRTUAL_ENV == "" ]
                                 then
-                                    _VIRTUALENV_STR="$CYAN($RED${VIRTUAL_ENV##*/}$CYAN)"
+                                    _VIRTUALENV_STR="\[$CYAN\](\[$RED\]${VIRTUAL_ENV##*/}\[$CYAN\])"
                                 else
                                     _VIRTUALENV_STR=""
                                 fi
-                                PS1="$_EXIT_STATUS_STR\n$WHITE┌─${debian_chroot:+($debian_chroot)}$_CONDA_ENV_STR$_VIRTUALENV_STR$WHITE[$_BLD$IGREEN\u$NORMAL$WHITE]──$BLUE[$YELLOW\w$BLUE]$_BRANCH_STR$MAGENTA: \$$WHITE\n|\n└────╼ $ICYAN>>> $NORMAL \[\e[00;00m\]"
+                                PS1="$_EXIT_STATUS_STR\n\[$WHITE\]┌─${debian_chroot:+($debian_chroot)}$_CONDA_ENV_STR$_VIRTUALENV_STR\[$WHITE\][\[$_BLD\]\[$IGREEN\]\u\[$NORMAL\]\[$WHITE\]]──\[$BLUE\][\[$YELLOW\]\w\[$BLUE\]]$_BRANCH_STR\[$MAGENTA\]: \$\[$WHITE\]\n|\n└────╼ \[$ICYAN\]>>>\[$RESET\] "
 
 				unset _EXIT_STATUS_STR
 				unset _EXIT_STATUS
