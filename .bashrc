@@ -17,12 +17,19 @@ fi
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-# Store 10k history entries
-HISTSIZE=10000
+# Store 1k history entries
+HISTSIZE=1000
 HISTFILESIZE=2000
 
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -45,35 +52,89 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__docker_machine_ps1)\$'
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__docker_machine_ps1)\$ '
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
 fi
-unset color_prompt force_color_prompt
 
+#if [ "$color_prompt" = yes ]; then
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__docker_machine_ps1)\$'
+#else
+#    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__docker_machine_ps1)\$ '
+#fi
 
+unset force_color_prompt
 
 function _update_ps1() {
+
+    _EXIT_STATUS=$?
+    if [ "$color_prompt" = yes ]; then
+        WHITE=$'\033[38;5;7m'
+        CYAN=$'\033[38;5;6m'
+        ICYAN=$'\033[38;5;14m'
+        RED=$'\033[38;5;1m'
+        NORMAL=$'\[$(tput sgr0)\]'
+        IGREEN=$'\033[38;5;10m'
+        BLUE=$'\033[38;5;4m'
+        YELLOW=$'\033[38;5;3m'
+        MAGENTA=$'\033[38;5;5m'
+        _BLD=$'\033[1m'
+    else
+        WHITE=""
+        CYAN=""
+        ICYAN=""
+        RED=""
+        NORMAL=""
+        IGREEN=""
+        BLUE=""
+        YELLOW=""
+        MAGENTA=""
+    fi
+
 	# X Terminal titles
 	case "$TERM" in
 		xterm*|rxvt*)
-				_EXIT_STATUS=$?
-				[ $_EXIT_STATUS != 0 ] && _EXIT_STATUS_STR=" \[\033[38;5;7m\][\[$(tput sgr0)\]\[\033[38;5;9m\]$_EXIT_STATUS\[$(tput sgr0)\]\[\033[38;5;7m\]]\[$(tput sgr0)\]"
-
+                                if [ $_EXIT_STATUS -ne 0 ]
+                                then
+                                    _EXIT_STATUS_STR="$CYAN($RED$_EXIT_STATUS$CYAN)"
+                                else
+                                    _EXIT_STATUS_STR=""
+                                fi
 				_BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 				if [ ! $_BRANCH == "" ]
 				then
-					_BRANCH_STR="[\[$(tput sgr0)\]\[\033[38;5;1m\]$_BRANCH\[$(tput sgr0)\]\[\033[38;5;14m\]]"
+					_BRANCH_STR="$CYAN[$RED$_BRANCH$CYAN]"
 				else
 					_BRANCH_STR=""
 				fi
-			PS1="\n\[\e[0;37m\]┌─[\[\e[1;32m\u\e[0;37m\]]──[\e[1;33m\w\e[0;34m]\[\e[0;34m\]\[\e[1;36m\] $_BRANCH_STR: \$ \[\e[0;37m\]\n|\n\[\e[0;37m\]└────╼ \[\e[1;36m\]>>> \[\e[00;00m\]"
+                                if [ ! $CONDA_DEFAULT_ENV == "" ]
+                                then
+                                    _CONDA_ENV_STR="$CYAN($RED$CONDA_DEFAULT_ENV$CYAN)"
+                                else
+                                    _CONDA_ENV_STR=""
+                                fi
+                                if [ ! $VIRTUAL_ENV == "" ]
+                                then
+                                    _VIRTUALENV_STR="$CYAN($RED${VIRTUAL_ENV##*/}$CYAN)"
+                                else
+                                    _VIRTUALENV_STR=""
+                                fi
+                                PS1="$_EXIT_STATUS_STR\n$WHITE┌─${debian_chroot:+($debian_chroot)}$_CONDA_ENV_STR$_VIRTUALENV_STR$WHITE[$_BLD$IGREEN\u$NORMAL$WHITE]──$BLUE[$YELLOW\w$BLUE]$_BRANCH_STR$MAGENTA: \$$WHITE\n|\n└────╼ $ICYAN>>> $NORMAL \[\e[00;00m\]"
 
 				unset _EXIT_STATUS_STR
 				unset _EXIT_STATUS
 				unset _BRANCH_STR
 				unset _BRANCH
+                                unset _CONDA_ENV_STR
+                                unset WHITE
+                                unset CYAN
+                                unset ICYAN
+                                unset RED
+                                unset NORMAL
+                                unset IGREEN
+                                unset YELLOW
+                                unset MAGENTA
+                                unset _BLD
 			#}
 
 			#PROMPT_COMMAND=PROMPT
@@ -87,16 +148,10 @@ function _update_ps1() {
     
 }
 
-# Function to move to windows partition for work
-function movetoworkplace() {
-	cd /mnt/work/lz/java_tests/
-	cd "$1"
-}
-
 # Function to copy pic(s) to wall 
-function yp() {
-	cp -r "$@" ~/Pictures/.wall
-}
+#function yp() {
+#	cp -r "$@" ~/Pictures/.wall
+#}
 
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
@@ -121,65 +176,12 @@ b() {
     cd $str
 }
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-#compilation aliases
-alias gcc='gcc -W -Wall -Werror -Wextra -pedantic -std=c99 -g3'
-alias g++='g++ -W -Wall -Werror -Wextra -pedantic -std=c++17 -g3 -D_GLIBCXX_DEBUG'
-
 set -o vi
-
-#basic shortcuts
-alias v='vim'
-alias gdb='gdb -q'
-alias i3lock='i3lock-fancy'
-alias moulinette='python3 ~/.scripts/moulinette.py'
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

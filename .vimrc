@@ -161,7 +161,7 @@ map <F12> :r !xclip -o<CR>
 let g:colorizer_maxlines=2000
 
 " Complete braces
-autocmd BufRead *.java *.cpp *.c *.py inoremap { {<CR>}<Esc>ko
+autocmd BufRead *.java,*.cpp,*.c,*.py inoremap { {<CR>}<Esc>ko
 " Show invisible chars
 set lcs=tab:▸\ ,trail:·,nbsp:_
 set list lcs=tab:\|\

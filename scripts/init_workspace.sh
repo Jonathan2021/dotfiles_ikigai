@@ -15,16 +15,16 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 # App you want to start :
 
 apps=(
- "qutebrowser"
  "i3-sensible-terminal -e $SCRIPTPATH/genericscripttobash $SCRIPTPATH/sysinfo.sh"
  "i3-sensible-terminal -e $SCRIPTPATH/genericscripttobash $SCRIPTPATH/neostart.sh"
+ "chromium"
 )
 
 # Which workspace to assign your wanted App :
 workspaces=(
+"1"
+"1"
 "2: Browser"
-"1"
-"1"
 )
 
 # counter of opened windows

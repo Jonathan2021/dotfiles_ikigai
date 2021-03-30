@@ -2,12 +2,15 @@
 # /etc/bash.bashrc
 #
 
+# If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
 [[ $DISPLAY ]] && shopt -s checkwinsize
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
 
 # Prompt for the legends
 if ! [ -n "${SUDO_USER}" -a -n "${SUDO_PS1}" ]; then
