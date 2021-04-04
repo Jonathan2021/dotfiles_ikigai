@@ -642,3 +642,51 @@ Mar 30 09:30 : exception: RTIOThread could not get realtime scheduling, continui
 Mar 30 09:30 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
 Mar 30 09:30 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
 Mar 30 09:30 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Mar 30 13:33 : avahi: Client Disconnected, will reconnect shortly
+Mar 30 13:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 30 13:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 30 13:36 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Mar 30 13:36 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Mar 30 16:37 : avahi: Client Disconnected, will reconnect shortly
+Mar 30 21:28 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 30 21:28 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 30 21:28 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Mar 30 21:28 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Mar 31 10:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 31 10:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Mar 31 10:36 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Mar 31 10:36 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 01 02:01 : avahi: Client Disconnected, will reconnect shortly
+Apr 01 10:01 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 01 10:01 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 01 10:01 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 01 10:01 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 01 13:11 : avahi: Client Disconnected, will reconnect shortly
+Apr 01 18:06 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 01 18:06 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 01 18:06 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 01 18:06 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 02 11:41 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 02 11:42 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 02 11:42 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 02 11:42 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 02 13:01 : avahi: Client Disconnected, will reconnect shortly
+Apr 02 15:04 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 02 15:04 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 02 15:04 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 02 15:04 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 02 15:50 : avahi: Client Disconnected, will reconnect shortly
+Apr 03 12:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 03 12:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 03 12:02 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 03 12:02 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 03 16:30 : avahi: Client Disconnected, will reconnect shortly
+Apr 03 19:39 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 03 19:39 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 03 19:39 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 03 19:39 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 03 22:40 : avahi: Client Disconnected, will reconnect shortly
+Apr 04 10:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 04 10:03 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Apr 04 10:03 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
+Apr 04 10:03 : avahi: Service 'Music Player @ SpaceX-BFC' successfully established.
