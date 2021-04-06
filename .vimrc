@@ -68,6 +68,7 @@ Plug 'xolox/vim-misc'
 Plug 'lilydjwg/colorizer'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'jelera/vim-javascript-syntax'
+Plug 'morhetz/gruvbox'
 " All of your Plugs must be added before the following line
 call plug#end()
 
@@ -109,8 +110,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-filetype plugin on
-execute pathogen#infect()
+" filetype plugin on
+" execute pathogen#infect()
 
 
 " Allow backspacing over everything in insert mode.
