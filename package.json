@@ -1,0 +1,23 @@
+{
+  "name": "dotfiles_ikigai",
+  "version": "1.0.0",
+  "description": "```",
+  "main": "index.js",
+  "dependencies": {
+    "chalk-animation": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathan2021/dotfiles_ikigai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathan2021/dotfiles_ikigai/issues"
+  },
+  "homepage": "https://github.com/Jonathan2021/dotfiles_ikigai#readme"
+}
