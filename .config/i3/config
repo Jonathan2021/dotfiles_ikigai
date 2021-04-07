@@ -219,7 +219,7 @@ bar {
         urgent_workspace        #2f343f #ebcb8b #2f343f
     }
     strip_workspace_numbers yes
-    status_command exec .config/i3status/net-speed.sh
+    status_command i3status
 }
 
 #change volume
