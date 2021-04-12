@@ -69,8 +69,24 @@ Plug 'lilydjwg/colorizer'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'jelera/vim-javascript-syntax'
 Plug 'morhetz/gruvbox'
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
+Plug 'davidhalter/jedi-vim'
+" Plug 'ervandew/supertab'
+Plug 'vim-syntastic/syntastic'
+Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+
 " All of your Plugs must be added before the following line
 call plug#end()
+
+" for normal mode
+nmap <silent> <F8> <Plug>MarkdownPreview
+" for insert mode
+imap <silent> <F8> <Plug>MarkdownPreview
+" for normal mode
+nmap <silent> <F9> <Plug>StopMarkdownPreview
+" for insert mode
+imap <silent> <F9> <Plug>StopMarkdownPreview
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -278,3 +294,6 @@ let  g:C_UseTool_cmake = 'yes'
 let  g:C_UseTool_doxygen = 'yes'
 
 let s:hidden_all = 0
+
+" let g:SuperTabDefaultCompletionType = 'context'
+
