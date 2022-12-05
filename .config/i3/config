@@ -224,9 +224,9 @@ bar {
 
 #change volume
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 # amixer -D pulse sset Master 3%+ 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 # amixer -D pulse sset Master 3%-
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
 
